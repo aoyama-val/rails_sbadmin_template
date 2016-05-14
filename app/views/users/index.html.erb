@@ -1,10 +1,10 @@
-<h1>Listing Users</h1>
+<h1>ユーザー</h1>
 
 <table class="table table-bordered table-hover table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
+      <th>名前</th>
+      <th>メールアドレス</th>
       <th>表示</th>
       <th>編集</th>
       <th>操作</th>
@@ -16,15 +16,15 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to '表示', user %></td>
+        <td><%= link_to '編集', edit_user_path(user) %></td>
         <td>
           <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               操作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-              <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+              <li><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></li>
             </ul>
           </div>
         </td>
@@ -35,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New user', new_user_path, class: 'btn btn-primary' %>
+<%= link_to 'ユーザーを追加', new_user_path, class: 'btn btn-primary' %>
