@@ -23,9 +23,16 @@ p#alert {
   padding-top: 1px;
 }
 
+h1 {
+  font-size: 130%;
+}
+
 h2 {
-  margin-top: 10px;
-  font-size: 150%;
+  font-size: 110%;
+}
+
+.btn-back {
+  margin-top: 1em;
 }
 
 /*-----------------------------------------------------------------------------
@@ -37,10 +44,19 @@ body.login {
   background-color: #eee;
 }
 
+body.login .container {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+}
+
 .form-signin {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+}
+.form-signin-heading {
+  text-align: center;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
