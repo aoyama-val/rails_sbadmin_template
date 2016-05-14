@@ -1,13 +1,6 @@
 /* vim: set ts=2 sts=2 sw=2 expandtab: */
+
 @charset 'UTF-8';
-
-body {
-  padding-top: 50px;
-}
-
-.starter-template {
-  padding: 40px 15px;
-}
 
 p#notice {
   background: #009933;
@@ -24,6 +17,15 @@ p#alert {
   font-weight:bold;
   color:red;
   border-radius: 5px;
+}
+
+#page-wrapper {
+  padding-top: 1px;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 150%;
 }
 
 /*-----------------------------------------------------------------------------
