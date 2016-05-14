@@ -142,6 +142,9 @@
             </ul>
             <!-- /.nav-second-level -->
           </li>
+          <li>
+            <a href="/pages/no_privilege"><i class="fa fa-table fa-fw"></i> 権限なし</a>
+          </li>
         </ul>
       </div>
       <!-- /.sidebar-collapse -->
@@ -150,13 +153,7 @@
   </nav>
 
   <div id="page-wrapper">
-    <% if respond_to?(:notice) && notice.present? %>
-      <p id="notice"><%= notice %></p>
-    <% end %>
-
-    <% if (respond_to?(:alert) && alert.present?) || @alert.present? %>
-      <p id="alert"><%= alert %><%= @alert %></p>
-    <% end %>
+    <%= render :partial => "partials/notice" %>
 
     <%= yield %>
   </div>

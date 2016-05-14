@@ -5,6 +5,23 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def has_privilege(privilege)
+    case privilege
+    when :add_user
+    when :always_false
+      return false
+    end
+    return false
+  end
+
+  def check_privilege(privilege)
+    if not has_privilege(privilege)
+      redirect_to root_path, alert: "権限がありません"
+      return false
+    end
+    return true
+  end
+
   helper_method :current_user
 
   private

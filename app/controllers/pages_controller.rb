@@ -10,4 +10,9 @@ class PagesController < ApplicationController
 
   def error
   end
+
+  def no_privilege
+    return if check_privilege(:always_false) == false
+    render :text => "OK"    # never reach here
+  end
 end

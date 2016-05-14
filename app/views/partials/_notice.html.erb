@@ -1,0 +1,7 @@
+    <% if respond_to?(:notice) && notice.present? %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+
+    <% if (respond_to?(:alert) && alert.present?) || @alert.present? %>
+      <p class="alert"><%= alert %><%= @alert %></p>
+    <% end %>

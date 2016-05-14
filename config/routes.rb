@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users
 
   root 'pages#index'
+  get    'pages/no_privilege'   => 'pages#no_privilege'
 
   get     'login'             => 'sessions#login'
   post    'sessions/create'   => 'sessions#create'
