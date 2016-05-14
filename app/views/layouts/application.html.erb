@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Rails + sb-admin2のテンプレート</a>
+      <a class="navbar-brand" href="<%= root_path %>"><%= APP_TITLE %></a>
     </div>
     <!-- /.navbar-header -->
 
@@ -97,7 +97,7 @@
       <!-- /.dropdown -->
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-           青山正太郎 <i class="fa fa-caret-down"></i>
+          <%= current_user.name %> <i class="fa fa-caret-down"></i>
         </a>
         <ul class="dropdown-menu dropdown-user">
           <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -105,7 +105,7 @@
           <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
           </li>
           <li class="divider"></li>
-          <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i>ログアウト</a></li>
+          <li><a href="<%= logout_path%>"><i class="fa fa-sign-out fa-fw"></i>ログアウト</a></li>
         </ul>
         <!-- /.dropdown-user -->
       </li>
@@ -128,7 +128,7 @@
             <!-- /input-group -->
           </li>
           <li>
-            <a href="/customers"><i class="fa fa-table fa-fw"></i> 顧客</a>
+            <a href="/users"><i class="fa fa-table fa-fw"></i> ユーザー</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> サブメニュー<span class="fa arrow"></span></a>
@@ -150,6 +150,14 @@
   </nav>
 
   <div id="page-wrapper">
+    <% if respond_to?(:notice) && notice.present? %>
+      <p id="notice"><%= notice %></p>
+    <% end %>
+
+    <% if (respond_to?(:alert) && alert.present?) || @alert.present? %>
+      <p id="alert"><%= alert %><%= @alert %></p>
+    <% end %>
+
     <%= yield %>
   </div>
 </body>

@@ -11,7 +11,9 @@ class ApplicationController < ActionController::Base
 
   def check_login
     if session[:user_id].blank?
-      redirect_to root_path, alert: "ログインしてください"
+      redirect_to login_path, alert: "ログインしてください"
+    else
+      @current_user = User.find(session[:user_id])
     end 
   end
 end

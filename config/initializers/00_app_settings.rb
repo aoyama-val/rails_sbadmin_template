@@ -8,3 +8,6 @@
 #  2. environments/development.rb
 #  3. initializersの中（アルファベット順）
 #  4. routes.rb
+#
+
+APP_TITLE = "Rails + sb-admin2のテンプレート"

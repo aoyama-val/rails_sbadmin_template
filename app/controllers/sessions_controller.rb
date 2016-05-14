@@ -21,18 +21,19 @@ class SessionsController < ApplicationController
     # User.create!(:name => "admin", :password => "hoge", :password_confirmation => "hoge")
     #
     # http://qiita.com/regonn/items/4c76d4f3ef6c6af5c5e5
-    if true
-      session[:user_id] = 1 
-      redirect_to "/sessions/test", notice: "ログインしました"
+    
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to root_path, notice: "ログインしました"
     else
-      @error = "メールアドレスまたはパスワードが一致しません"
-      render "new"
-    end 
+      redirect_to login_path, alert: "メールアドレスまたはパスワードが一致しません"
+    end
   end 
 
   def logout
     session.delete(:user_id)
-    redirect_to "/", notice: "ログアウトしました"
+    redirect_to login_path, notice: "ログアウトしました"
   end 
 
   def test

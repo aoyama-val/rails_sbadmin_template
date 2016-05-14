@@ -35,6 +35,10 @@ h2 {
   margin-top: 1em;
 }
 
+table.table tbody tr td {
+  vertical-align: middle;
+}
+
 /*-----------------------------------------------------------------------------
   ログイン画面（bootstrap使用）
 -----------------------------------------------------------------------------*/
@@ -55,8 +59,9 @@ body.login .container {
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin-heading {
+h2.form-signin-heading {
   text-align: center;
+  font-size: 150%;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {

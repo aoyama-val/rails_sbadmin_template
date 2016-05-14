@@ -53,3 +53,4 @@ end
 #gem 'pg'
 #gem 'mysql2'
 gem 'unicorn'
+gem 'bcrypt'
