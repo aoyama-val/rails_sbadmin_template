@@ -21,8 +21,3 @@ User.create!(:email => "aosho235@gmail.com", :name => "青山正太郎", :passwo
 ```
 
 
-## TODO
-
-- usersテーブルにrole:stringカラムを作る
-- role == "admin"の場合のみサイドメニューにユーザーを表示する
-- 権限がない場合はエラーページを表示するようにする

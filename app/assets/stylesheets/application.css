@@ -25,10 +25,12 @@ p.alert {
 
 h1 {
   font-size: 130%;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 110%;
+  font-weight: bold;
 }
 
 .btn-back {
