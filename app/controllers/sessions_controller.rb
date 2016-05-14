@@ -26,6 +26,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to root_path, notice: "ログインしました"
+
+      user.last_login = Time.now
+      user.save!
     else
       redirect_to login_path, alert: "メールアドレスまたはパスワードが一致しません"
     end
