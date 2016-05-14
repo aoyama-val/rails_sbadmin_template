@@ -1,0 +1,3 @@
+<% if (respond_to?(:alert) && alert.present?) || @alert.present? %>
+  <p id="alert"><%= alert %><%= @alert %></p>
+<% end %>
