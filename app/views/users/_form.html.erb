@@ -20,12 +20,12 @@
     <%= f.text_field :email, class: "form-control" %>
   </div>
   <div class="field form-group">
-    <%= f.label :password %><br>
-    <%= f.text_field :password, class: "form-control" %>
+    <%= f.label "新しいパスワード" %><br>
+    <%= f.password_field :password, class: "form-control" %>
   </div>
   <div class="field form-group">
-    <%= f.label :password_confirmation %><br>
-    <%= f.text_field :password_confirmation, class: "form-control" %>
+    <%= f.label "パスワード（確認）" %><br>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
