@@ -5,6 +5,13 @@ gem 'twitter-bootstrap-rails'は使っていない。バグがあるし使いづ
 普通にrails g scaffoldでビューを作成して手でカスタマイズする。
 
 
+## セットアップ
+
+```
+bundle install
+bin/rake db:migrate
+```
+
 
 ## 起動（開発環境）
 
