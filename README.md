@@ -1,5 +1,7 @@
 # Rails + sb-admin2のテンプレート
 
+Deviseを使わない独自ログイン機能つき。
+
 gem 'twitter-bootstrap-rails'は使っていない。バグがあるし使いづらかった。
 
 普通にrails g scaffoldでビューを作成して手でカスタマイズする。
