@@ -95,3 +95,11 @@ h2.form-signin-heading {
   border-top-right-radius: 0;
 }
 
+ul.pagination {
+  margin: 0px 0px 0px 10px;
+  vertical-align: middle;
+}
+
+div.index_actions {
+  margin: 1em 0em 1em 0em;
+}

@@ -54,3 +54,4 @@ end
 #gem 'mysql2'
 gem 'unicorn'
 gem 'bcrypt'
+gem 'kaminari'
