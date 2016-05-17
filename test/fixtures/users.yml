@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  username: MyString
-  name: MyString
-  password_digest: MyString
-
-two:
-  username: MyString
-  name: MyString
-  password_digest: MyString
+<% (1..100).each do |i| %>
+u<%= i %>:
+  id: <%= i %>
+  email: u<%= i %>@gmail.com
+  name: ユーザー<%= i %>
+  password_digest: <%= a = User.new; a.password = "hoge#{i}"; a.password_digest %>
+<% end %>

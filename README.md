@@ -12,6 +12,7 @@ gem 'twitter-bootstrap-rails'は使っていない。バグがあるし使いづ
 ```
 bundle install
 bin/rake db:migrate
+bin/rake db:fixtures:load
 ```
 
 
@@ -30,3 +31,6 @@ User.create!(:email => "aosho235@gmail.com", :name => "青山正太郎", :passwo
 ```
 
 
+## TODO
+
+- ページング機能
