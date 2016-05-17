@@ -30,7 +30,3 @@ bin/rails s -b 0.0.0.0
 User.create!(:email => "aosho235@gmail.com", :name => "青山正太郎", :password => "hoge", :password_confirmation => "hoge")
 ```
 
-
-## TODO
-
-- ページング機能
