@@ -1,7 +1,13 @@
     <% if respond_to?(:notice) && notice.present? %>
-      <p class="notice"><%= notice %></p>
+      <p class="notice">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        <%= notice %>
+      </p>
     <% end %>
 
     <% if (respond_to?(:alert) && alert.present?) || @alert.present? %>
-      <p class="alert"><%= alert %><%= @alert %></p>
+      <p class="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <%= alert %><%= @alert %>
+      </p>
     <% end %>
