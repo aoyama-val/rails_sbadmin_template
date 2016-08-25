@@ -47,7 +47,7 @@ group :development do
   gem 'quiet_assets'
 end
 
-#gem 'pg'
+gem 'pg'
 #gem 'mysql2'
 gem 'unicorn'
 gem 'bcrypt'
